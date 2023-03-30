@@ -36,7 +36,7 @@ if df is not None:
     m.fit(data)
 
 """
-### Step 3: Visualize Forecast Data
+###  Visualize Forecast Data
 
 The below visual shows future predicted values. "yhat" is the predicted value, yhat_lower is min. value and yhat_upper is max. value we can use from obtained data.
 """
