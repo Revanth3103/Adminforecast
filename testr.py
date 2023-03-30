@@ -103,10 +103,10 @@ st.dataframe(df)
 all_vizuals = ['Info', 'null values',  'Target Analysis']
 functions.sidebar_space(3)         
 vizuals = st.sidebar.multiselect("Choose which visualizations you want to see 👇", all_vizuals)
- if 'Info' in vizuals:
-        st.subheader('Info:')
-        c1, c2, c3 = st.columns([1, 2, 1])
-        c2.dataframe(functions.df_info(df))
+if 'Info' in vizuals:
+    st.subheader('Info:')
+    c1, c2, c3 = st.columns([1, 2, 1])
+    c2.dataframe(functions.df_info(df))
 
     if 'null values' in vizuals:
         st.subheader('NA Value Information:')
