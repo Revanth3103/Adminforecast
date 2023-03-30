@@ -94,19 +94,16 @@ st.write('<p style="font-size:100%">&nbsp 4. Distribution of target using plot</
 
 functions.space()
 st.write('<p style="font-size:130%">Import Dataset</p>', unsafe_allow_html=True)
-
-    
-    st.subheader('Dataframe:')
-    n, m = df.shape
-    st.write(f'<p style="font-size:130%">Dataset contains {n} rows and {m} columns.</p>', unsafe_allow_html=True)   
-    st.dataframe(df)
+st.subheader('Dataframe:')
+n, m = df.shape
+st.write(f'<p style="font-size:130%">Dataset contains {n} rows and {m} columns.</p>', unsafe_allow_html=True)   
+st.dataframe(df)
 
 
-    all_vizuals = ['Info', 'null values',  'Target Analysis']
-    functions.sidebar_space(3)         
-    vizuals = st.sidebar.multiselect("Choose which visualizations you want to see 👇", all_vizuals)
-
-    if 'Info' in vizuals:
+all_vizuals = ['Info', 'null values',  'Target Analysis']
+functions.sidebar_space(3)         
+vizuals = st.sidebar.multiselect("Choose which visualizations you want to see 👇", all_vizuals)
+ if 'Info' in vizuals:
         st.subheader('Info:')
         c1, c2, c3 = st.columns([1, 2, 1])
         c2.dataframe(functions.df_info(df))
