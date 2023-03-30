@@ -78,17 +78,6 @@ st.title('Forecasting')
 st.write('Import the time series csv file here. Columns must be labeled ds and y. The input to Prophet is always a dataframe with two columns: ds and y. The ds (datestamp) column be ideally YYYY-MM-DD for a date or YYYY-MM-DD HH:MM:SS for a timestamp. The y(target) column must be numeric, and represents the measurement we wish to forecast.', type='csv')
 st.write('CSV file can be updated and reuploaded any number of times inorder to get prediction and forecasting depends on only two factors date(ds) and target column(y)')
 
-l = ['Rice','sugar','oil']
-use_defo = st.selectbox('Select Dataset',l)
-if use_defo == "":
-    st.write("Choose one")
-if use_defo == 'Rice':
-    df = 'Riceprice.csv'
-elif use_defo == 'sugar':
-    df = 'sugar.csv'
-else :
-    df ='oil.csv'
-
 if df is not None:
     data = pd.read_csv(df)
     data['ds'] = pd.to_datetime(data['ds'],errors='coerce') 
