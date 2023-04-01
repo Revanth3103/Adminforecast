@@ -7,7 +7,7 @@ from prophet.diagnostics import cross_validation
 from prophet.plot import plot_cross_validation_metric
 import base64
 
-st.title('Forecasting'))
+st.title('Forecasting')
 st.write('CSV file can be updated and reuploaded any number of times inorder to get prediction and forecasting depends on only two factors date(ds) and target column(y)')
 
 
